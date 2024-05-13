@@ -22,6 +22,8 @@ pub struct CurrentSession {
     pub refresh_token: String,
 }
 
+
+
 /*
 #[wasm_bindgen(getter_with_clone)]
 pub struct MFAChallengeParams {
@@ -37,6 +39,62 @@ pub struct MFAVerifyParams {
     pub code: String,
 }
 */
+#[wasm_bindgen(getter_with_clone)]
+pub struct Session {
+    pub access_token: String,
+    pub token_type: String,
+    pub expires_in: i64,
+    pub expires_at: i64,
+    pub refresh_token: String,
+    pub user: User,
+}
+
+#[wasm_bindgen(getter_with_clone)]
+pub struct User {
+    pub id: String,
+    pub aud: String,
+    pub role: String,
+    pub email: String,
+    pub email_confirmed_at: String,
+    pub phone: String,
+    pub confirmed_at: String,
+    pub last_sign_in_at: String,
+    pub app_metadata: AppMetadata,
+    pub user_metadata: UserMetadata,
+    pub identities: Vec<Identity>,
+    pub created_at: String,
+    pub updated_at: String,
+    pub is_anonymous: bool,
+}
+
+#[wasm_bindgen(getter_with_clone)]
+pub struct AppMetadata {
+    pub provider: String,
+    pub providers: Vec<String>,
+}
+#[wasm_bindgen(getter_with_clone)]
+pub struct UserMetadata {
+}
+#[wasm_bindgen(getter_with_clone)]
+pub struct Identity {
+    pub identity_id: String,
+    pub id: String,
+    pub user_id: String,
+    pub identity_data: IdentityData,
+    pub provider: String,
+    pub last_sign_in_at: String,
+    pub created_at: String,
+    pub updated_at: String,
+    pub email: String,
+}
+#[wasm_bindgen(getter_with_clone)]
+pub struct IdentityData {
+    pub email: String,
+    pub email_verified: bool,
+    pub phone_verified: bool,
+    pub sub: String,
+}
+
 
 #[wasm_bindgen]
 extern "C" {
@@ -401,7 +459,7 @@ extern "C" {
     pub async fn sign_in_with_password(
         this: &Auth,
         credentials: Credentials,
-    ) -> Result<JsValue, JsValue>;
+    ) -> Result<Session, JsValue>;
 
     /// # Sign in a user through OTP
     ///
