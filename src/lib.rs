@@ -41,7 +41,6 @@ pub struct MFAVerifyParams {
 }
 */
 #[derive(Default, Debug, Clone, PartialEq)]
-#[wasm_bindgen(getter_with_clone)]
 pub struct Session {
     pub access_token: String,
     pub token_type: String,
@@ -52,7 +51,6 @@ pub struct Session {
 }
 
 #[derive(Default, Debug, Clone, PartialEq)]
-#[wasm_bindgen(getter_with_clone)]
 pub struct User {
     pub id: String,
     pub aud: String,
@@ -71,20 +69,17 @@ pub struct User {
 }
 
 #[derive(Default, Debug, Clone, PartialEq)]
-#[wasm_bindgen(getter_with_clone)]
 pub struct AppMetadata {
     pub provider: String,
     pub providers: Vec<String>,
 }
 
 #[derive(Default, Debug, Clone, PartialEq)]
-#[wasm_bindgen(getter_with_clone)]
 pub struct UserMetadata {
-    
+
 }
 
 #[derive(Default, Debug, Clone, PartialEq)]
-#[wasm_bindgen(getter_with_clone)]
 pub struct Identity {
     pub identity_id: String,
     pub id: String,
@@ -97,7 +92,6 @@ pub struct Identity {
     pub email: String,
 }
 #[derive(Default, Debug, Clone, PartialEq)]
-#[wasm_bindgen(getter_with_clone)]
 pub struct IdentityData {
     pub email: String,
     pub email_verified: bool,
