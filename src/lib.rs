@@ -4,6 +4,7 @@
 use wasm_bindgen::prelude::*;
 
 /// Sign in with email and password credentials
+
 #[wasm_bindgen(getter_with_clone)]
 pub struct Credentials {
     pub email: String,
@@ -39,6 +40,7 @@ pub struct MFAVerifyParams {
     pub code: String,
 }
 */
+#[derive(Default, Debug, Clone, PartialEq)]
 #[wasm_bindgen(getter_with_clone)]
 pub struct Session {
     pub access_token: String,
@@ -49,6 +51,7 @@ pub struct Session {
     pub user: User,
 }
 
+#[derive(Default, Debug, Clone, PartialEq)]
 #[wasm_bindgen(getter_with_clone)]
 pub struct User {
     pub id: String,
@@ -67,14 +70,19 @@ pub struct User {
     pub is_anonymous: bool,
 }
 
+#[derive(Default, Debug, Clone, PartialEq)]
 #[wasm_bindgen(getter_with_clone)]
 pub struct AppMetadata {
     pub provider: String,
     pub providers: Vec<String>,
 }
+
+#[derive(Default, Debug, Clone, PartialEq)]
 #[wasm_bindgen(getter_with_clone)]
 pub struct UserMetadata {
 }
+
+#[derive(Default, Debug, Clone, PartialEq)]
 #[wasm_bindgen(getter_with_clone)]
 pub struct Identity {
     pub identity_id: String,
@@ -87,6 +95,7 @@ pub struct Identity {
     pub updated_at: String,
     pub email: String,
 }
+#[derive(Default, Debug, Clone, PartialEq)]
 #[wasm_bindgen(getter_with_clone)]
 pub struct IdentityData {
     pub email: String,
