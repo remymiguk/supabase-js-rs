@@ -80,6 +80,7 @@ pub struct AppMetadata {
 #[derive(Default, Debug, Clone, PartialEq)]
 #[wasm_bindgen(getter_with_clone)]
 pub struct UserMetadata {
+    
 }
 
 #[derive(Default, Debug, Clone, PartialEq)]
