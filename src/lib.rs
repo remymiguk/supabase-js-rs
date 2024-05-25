@@ -6,9 +6,16 @@ use wasm_bindgen::prelude::*;
 /// Sign in with email and password credentials
 
 #[wasm_bindgen(getter_with_clone)]
+pub struct CredentialsAcceptedValues {
+    pub data: JsValue
+}
+
+
+#[wasm_bindgen(getter_with_clone)]
 pub struct Credentials {
     pub email: String,
     pub password: String,
+    pub options: Option<CredentialsAcceptedValues>
 }
 
 #[wasm_bindgen(getter_with_clone)]
