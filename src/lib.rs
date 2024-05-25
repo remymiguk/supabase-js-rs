@@ -4,7 +4,7 @@
 use wasm_bindgen::prelude::*;
 
 /// Sign in with email and password credentials
-
+#[derive(Default, Debug, Clone, PartialEq, Serialize, Deserialize)]
 #[wasm_bindgen(getter_with_clone)]
 pub struct CredentialsAcceptedValues {
     pub data: JsValue
