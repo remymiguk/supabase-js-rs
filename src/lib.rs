@@ -2,7 +2,8 @@
 //!
 
 use wasm_bindgen::prelude::*;
-
+use serde::Deserialize;
+use serde::Serialize;
 /// Sign in with email and password credentials
 #[derive(Default, Debug, Clone, PartialEq, Serialize, Deserialize)]
 #[wasm_bindgen(getter_with_clone)]
