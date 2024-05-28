@@ -2,10 +2,10 @@
 //!
 
 use wasm_bindgen::prelude::*;
-use serde::Deserialize;
-use serde::Serialize;
+
 /// Sign in with email and password credentials
-#[derive(Default, Debug, Clone, PartialEq, Serialize, Deserialize)]
+
+#[derive(Default, Debug, Clone)]
 #[wasm_bindgen(getter_with_clone)]
 pub struct CredentialsAcceptedValues {
     pub data: JsValue
@@ -471,7 +471,7 @@ extern "C" {
     pub async fn sign_in_with_password(
         this: &Auth,
         credentials: Credentials,
-    ) -> Result<Session, JsValue>;
+    ) -> Result<JsValue, JsValue>;
 
     /// # Sign in a user through OTP
     ///
