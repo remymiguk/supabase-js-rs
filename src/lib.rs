@@ -7,7 +7,7 @@ use wasm_bindgen::prelude::*;
 
 #[wasm_bindgen(getter_with_clone)]
 pub struct OptionsCredentials {
-    pub options: JsValue<DataCredentialsAcceptedValues>
+    pub options: JsValue
 }
 
 #[wasm_bindgen(getter_with_clone)]
@@ -20,7 +20,7 @@ pub struct DataCredentialsAcceptedValues {
 pub struct Credentials {
     pub email: String,
     pub password: String,
-    pub options: Option<JsValue<OptionsCredentials>>
+    pub options: Option<OptionsCredentials>
 }
 
 #[wasm_bindgen(getter_with_clone)]
