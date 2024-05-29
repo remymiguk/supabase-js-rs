@@ -21,7 +21,7 @@ pub struct DataCredentialsAcceptedValues {
 pub struct Credentials {
     pub email: String,
     pub password: String,
-    pub data: JsValue
+    pub options: JsValue
 }
 
 #[wasm_bindgen(getter_with_clone)]
