@@ -7,7 +7,7 @@ use wasm_bindgen::prelude::*;
 #[derive(Clone)]
 #[wasm_bindgen(getter_with_clone)]
 pub struct OptionsCredentials {
-    pub options: JsValue
+    pub options: DataCredentialsAcceptedValues
 }
 
 #[derive(Clone)]
