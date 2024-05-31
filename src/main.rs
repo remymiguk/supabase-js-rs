@@ -12,7 +12,7 @@ use crate::pages::{signin::SigninPage, signup::SignupPage};
 use components::BasicNavbar;
 use leptos_bulma::elements::BButton;
 fn main() {
-    
+
     dotenv().ok();
 
     provide_context(GlobalState::new());
